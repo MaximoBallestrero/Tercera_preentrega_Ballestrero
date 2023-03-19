@@ -1,16 +1,23 @@
-{% extends 'core/base.html'%}
+{% extends 'core/base.html' %}
 
-{%load static%}
+{% load static %}
 
-{%block nombre_de_pestana%}
+
+
+{% block nombre_de_pestana %}
 Agregar Empleado
-{%endblock%}
+{% endblock %}
 
-{%block explicacion%}
+
+
+{% block explicacion %}
 Esta es la pagina para agregar empleados. Abajo puedes agregar empleados a la base de datos.
-{%endblock%}
+{% endblock %}
 
-{%block contenido_central%}
+
+
+{% block contenido_central %}
+Por favor, complete con los datos del empleado que quiere agregar:
 <form action='' method='POST'>
     {% csrf_token %}
     <table>
@@ -18,4 +25,4 @@ Esta es la pagina para agregar empleados. Abajo puedes agregar empleados a la ba
     </table>
     <input type='submit' value='Agregar Empleado'>
 </form>
-{%endblock%}
+{% endblock %}

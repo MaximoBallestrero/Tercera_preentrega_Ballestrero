@@ -1,15 +1,25 @@
-{% extends 'core/base.html'%}
+{% extends 'core/base.html' %}
 
-{%load static%}
+{% load static %}
 
-{%block nombre_de_pestana%}
+
+
+{% block nombre_de_pestana %}
 Inicio
 {%endblock%}
 
-{%block explicacion%}
+
+
+{% block explicacion %}
 Esta es la pagina de incio. Abajo puedes buscar productos en la base de datos.
 {%endblock%}
 
-{%block contenido_central%}
-Aca iria el formulario
-{%endblock%}
+
+
+{% block contenido_central %}
+<form action="{% url 'resultado_busq_productos' %}" method='GET'>
+    {% csrf_token %}
+    <p>Nombre del producto: <input type='text' name='nombre', id='nombre'>
+    <input type='submit' value='Buscar Producto'>
+</form>
+{% endblock %}

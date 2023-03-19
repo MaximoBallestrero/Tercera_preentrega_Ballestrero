@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+
+{%load static%}
+
+
+
+{% block nombre_de_pestana %}
+Resultado de Busqueda de productos
+{% endblock %}
+
+
+
+{% block explicacion %}
+Esta pagina muestra los resultados de la busqueda de productos que realizaste.
+{% endblock %}
+
+
+
+{% block contenido_central %}
+
+<p>Estamos buscando: {{nombre}}</p>
+
+{%if productos%}
+<p>Encontramos los siguientes resultados:</p>
+
+<ul>
+    {% for producto in productos %}
+        <li>Nombre: {{producto.nombre}} --- Precio: ${{producto.precio}}
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>No encontramos ninguna coincidencia con lo buscado.</p>
+
+{% endif %}
+
+<p>
+    <br>
+    <a href="{% url 'inicio' %}">Volver al inicio</a>
+</p>
+{% endblock %}

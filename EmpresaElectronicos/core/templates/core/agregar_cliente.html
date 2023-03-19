@@ -1,16 +1,23 @@
-{% extends 'core/base.html'%}
+{% extends 'core/base.html' %}
 
-{%load static%}
+{% load static %}
 
-{%block nombre_de_pestana%}
+
+
+{% block nombre_de_pestana %}
 Agregar Cliente
-{%endblock%}
+{% endblock %}
 
-{%block explicacion%}
+
+
+{% block explicacion %}
 Esta es la pagina para agregar clientes. Abajo puedes agregar clientes a la base de datos.
-{%endblock%}
+{% endblock %}
 
-{%block contenido_central%}
+
+
+{% block contenido_central %}
+Por favor, complete con los datos del cliente que quiere agregar:
 <form action='' method='POST'>
     {% csrf_token %}
     <table>
@@ -18,4 +25,4 @@ Esta es la pagina para agregar clientes. Abajo puedes agregar clientes a la base
     </table>
     <input type='submit' value='Agregar Cliente'>
 </form>
-{%endblock%}
+{% endblock %}

@@ -3,8 +3,15 @@ from core.forms import AgregaClienteForm, AgregaEmpleadoForm, AgregaProductoForm
 from core.models import Cliente, Empleado, Producto
 
 # Create your views here.
+
 def inicio(request):
     return render(request, 'core/index.html')
+
+def result_busc_productos(request):
+    if request.GET['nombre']:
+        nombre=request.GET['nombre']
+        productos=Producto.objects.filter(nombre__icontains=nombre)
+        return render(request, 'core/result_busc_productos.html', {'productos':productos, 'nombre':nombre})
 
 
 
