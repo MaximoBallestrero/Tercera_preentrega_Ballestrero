@@ -1,0 +1,21 @@
+{% extends 'core/base.html'%}
+
+{%load static%}
+
+{%block nombre_de_pestana%}
+Agregar Cliente
+{%endblock%}
+
+{%block explicacion%}
+Esta es la pagina para agregar clientes. Abajo puedes agregar clientes a la base de datos.
+{%endblock%}
+
+{%block contenido_central%}
+<form action='' method='POST'>
+    {% csrf_token %}
+    <table>
+        {{agr_cliente_form.as_table}}
+    </table>
+    <input type='submit' value='Agregar Cliente'>
+</form>
+{%endblock%}

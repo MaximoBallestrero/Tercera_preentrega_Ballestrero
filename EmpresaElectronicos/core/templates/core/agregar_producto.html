@@ -1,0 +1,21 @@
+{% extends 'core/base.html'%}
+
+{%load static%}
+
+{%block nombre_de_pestana%}
+Agregar Producto
+{%endblock%}
+
+{%block explicacion%}
+Esta es la pagina para agregar productos. Abajo puedes agregar productos a la base de datos.
+{%endblock%}
+
+{%block contenido_central%}
+<form action='' method='POST'>
+    {% csrf_token %}
+    <table>
+        {{agr_producto_form.as_table}}
+    </table>
+    <input type='submit' value='Agregar Producto'>
+</form>
+{%endblock%}
