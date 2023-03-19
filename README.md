@@ -1,0 +1,10 @@
+Aca dejo mi tercera pre-entrega del curso de Coderhouse de Python, camada 48600.  
+Mi idea fue hacer una pagina de una empresa que vende dispositivos electronicos. Hice tres modelos, Clientes, Empleados y Productos.  
+Como no subi la base de datos (en el .gitignore puse db.sqlite3), creo que vas a tener que hacer las migraciones pero no se.  
+En cualquier caso: una vez que ya te bajaste el repositorio en tu compu, checkeaste lo de la base de datos, y pusiste a andar el servidor, tenes que entrar a la pagina web. Para eso podes buscar localhost:8000/core/.  
+Eso te lleva a la pagina de inicio. Como dice la misma pagina, esa es para buscar productos en la base de datos, pero eso lo haras despues. En la derecha de la pantalla hay cuatro puntitos (la barra de navegacion, creada con herencia de templates, al igual que el header y el footer). Y cuando el mouse esta arriba de ellos, muestran a que pagina te llevan (Inicio, Agregar Cliente, Agregar Empleado, y Agregar Productos). En las paginas para agregar, vas a encontrarte con formularios que tenes que completar con los datos que queres agregar. Para checkear que funcionen puedes ir al panel de adminstracion (aunque tendrias que crearte un superusuario antes) con localhost:8000/admin.  
+Y por ultimo, despues de por lo menos haber agregado un producto, si vas a la pagina de inicio, tienes ahi el formulario para buscar productos. Ese busca por nombre de producto, y te devuelve, en otro template, todos los resultados que contienen lo que buscaste. Y abajo de la lista, hay un boton para volver al inicio.  
+No se si es super importante pero aviso que use el entorno virtual pipenv.  
+Ademas, aca dejo el link de la pagina donde me baje el template de bootstrap: https://www.free-css.com/free-css-templates/page288/meetup  
+Saludos,
+Maximo Ballestrero.
